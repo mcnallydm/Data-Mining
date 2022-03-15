@@ -9,9 +9,6 @@ WHAT WE NEED:
 - A way to input/read data
 '''
 # yes, no
-from importlib.machinery import WindowsRegistryFinder
-
-
 play = [9, 5]
 
 outlook = [
