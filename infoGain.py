@@ -48,18 +48,30 @@ def get_tsv_data(file):
     trainData_id = []
     trainData_x = []
     trainData_y = []
+    
 
     data = open(file)
-
     current_line = data.readline()
-    if not current_line:
-        return 0
-    else:
-        current_line = current_line.strip()
-        current_line = current_line.split("\t")
-        trainFeatures_ID = current_line.pop(0)
-        trainFeatures_Y = current_line.pop()
-        trainFeatures_X = current_line
+    current_line = current_line.strip()
+    current_line = current_line.split("\t")
+    trainFeatures_id = current_line.pop(0)
+    trainFeatures_x = current_line.pop()
+    trainFeatures_y = current_line
+    while(1):
+        current_line = data.readline()
+        if not current_line:
+            break
+        else:
+            current_line = current_line.strip()
+            current_line = current_line.split("\t")
+            trainData_id.append(current_line.pop(0))
+            trainData_y.append(current_line.pop())
+            trainData_x.append(current_line)
+    return trainFeatures_id, trainFeatures_x, trainFeatures_y, trainData_id, trainData_x, trainData_y
+
+def my_open_tsv(file):
+    master_list = []
+    return master_list
 
 def entropy(class_count):  # list of counts of each outcome
     total = 0
