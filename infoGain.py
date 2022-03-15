@@ -71,6 +71,11 @@ def get_tsv_data(file):
 
 def my_open_tsv(file):
     master_list = []
+    data = open(file)
+    current_line = data.readline()
+    current_line = current_line.strip()
+    current_line = current_line.split("\t")
+    master_list.append(current_line)
     return master_list
 
 def entropy(class_count):  # list of counts of each outcome
