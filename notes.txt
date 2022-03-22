@@ -9,7 +9,7 @@ Pop
     thing.pop(idx)  # Removes the thing at the specified index
 
 Random Forests
-    scikit-learn has a RandomForestsClassifier(...)
+    scikit-learn has a RandomForestClassifier(...)
 
 sklearn has a lot of the things we need
     Accuracy

@@ -1,0 +1,15 @@
+ID	Var1	Var2	Var3	Var4	Outcome
+1	1	1	0	0	no
+2	1	1	0	1	no
+3	1	0	1	1	yes
+4	1	0	1	0	yes
+5	0	0	1	0	yes
+6	0	0	1	1	no
+7	0	0	1	1	yes
+8	0	1	1	0	no
+9	0	1	0	0	yes
+10	1	1	0	0	yes
+11	1	1	0	0	yes
+12	1	0	0	1	yes
+13	0	0	0	1	yes
+14	0	0	0	1	no
