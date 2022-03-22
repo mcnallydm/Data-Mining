@@ -25,6 +25,6 @@ def make_v_sets(trainData_X, trainData_Y):
         test_x.append(trainData_X[te])
         test_y.append(trainData_Y[te])
     print("Train x:", train_x, '\nTrain y:', train_y)
-    print("Train x:", test_x, '\nTrain y:', test_y)
+    print("Test x:", test_x, '\nTest y:', test_y)
 
 make_v_sets(trainData_X, trainData_Y)
