@@ -1,0 +1,22 @@
+Install sklearn
+    pip install scikit-learn
+
+Import sklearn
+    import sklearn
+
+Pop
+    thing.pop() # Removes last element in the array
+    thing.pop(idx)  # Removes the thing at the specified index
+
+Random Forests
+    scikit-learn has a RandomForestsClassifier(...)
+
+sklearn has a lot of the things we need
+    Accuracy
+    Precision
+    Recall
+    etc.
+
+numpy
+    cast it as "np"
+
