@@ -19,3 +19,5 @@ def rand_forests(trainData_X, trainData_Y):
         #warm_start= False,
         #class_weight = None
     )
+    rf.fit (trainData_X, trainData_Y) 	
+    return rf

@@ -65,13 +65,13 @@ def printInputData (file):
 """
     missing description
 """
-def itcRandomForest (inputFileData_X, inputFileData_Y): ## pass RF parameters here if you want 
+def itcRandomForest (inputFileData_X, inputFileData_Y, ml): ## pass RF parameters here if you want 
     itcRF = RandomForestClassifier(
                 n_estimators = 100, 
                 criterion = "gini", 
                 max_depth = None, 
                 min_samples_split = 2, 
-                min_samples_leaf = 1, 
+                min_samples_leaf = ml, 
                 #min_weight_fraction_leaf = 0.0, 
                 max_features = "auto", 
                 #max_leaf_nodes = None,  
@@ -96,7 +96,7 @@ inputFileFeatures_Y, inputFileData_ID, \
 inputFileData_X, inputFileData_Y = getDataFromTSV(inputFile)
 
 # initialise StratifiedKFold and arrays for our data (we will 'append' to them)
-skf = StratifiedKFold(n_splits = 3)
+skf = StratifiedKFold(n_splits = 5)
 train_x = []
 train_y = []
 test_x = []
@@ -119,3 +119,9 @@ print ('train x: \n', train_x, '\n train y\n', train_y)
 print ('test x: \n', test_x, '\n test y\n', test_y)
 
 # start model / prediction here
+min_samples_leaf = [1, 2, 3, 4, 5]
+model = 0
+for thing in min_samples_leaf:
+    for idx in range(0, 4):
+        model = itcRandomForest(train_x[idx], train_y[idx], thing)
+        print(model)
