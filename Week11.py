@@ -125,3 +125,15 @@ for thing in min_samples_leaf:
     for idx in range(0, 4):
         model = itcRandomForest(train_x[idx], train_y[idx], thing)
         print(model)
+
+'''
+    Data is provided as a set of arrays WITHIN one bigger array each (x or y):
+
+        a1  a2  a3  a4  ... ai      class
+    x1  [1  0   9   8   ... 6]  y1  [0]
+    x2  [7  6   8   4   ... 9]  y2  [1]
+    ...
+    ...
+    ...
+    xj  [4  3   6   0   ... 4]  yn  [1]
+'''
